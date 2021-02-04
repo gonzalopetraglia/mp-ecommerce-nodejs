@@ -82,11 +82,11 @@ app.get('/success', function (req, res) {
         let data = {
             view: '',
             message: 'Gracias por su compra, el pago se efectuo con exito.',
-            payment: {
-                id: req.query.payment_id,
-                external_reference: req.query.external_reference,
-                merchant_order_id: req.query.merchant_order_id,
-            }
+            payment_id: req.query.payment_id,
+            external_reference: req.query.external_reference,
+            merchant_order_id: req.query.merchant_order_id,
+            preference_id: req.query.preference_id,
+            payment_type: req.query.payment_type
         }
         res.render('message', data);
     }
@@ -100,11 +100,11 @@ app.get('/failure', function (req, res) {
         let data = {
             view: '',
             message: 'Ocurrio un error al efectuar el pago, por favor reintentar.',
-            payment: {
-                id: req.query.payment_id,
-                external_reference: req.query.external_reference,
-                merchant_order_id: req.query.merchant_order_id,
-            }
+            payment_id: req.query.payment_id,
+            external_reference: req.query.external_reference,
+            merchant_order_id: req.query.merchant_order_id,
+            preference_id: req.query.preference_id,
+            payment_type: req.query.payment_type
         }
         res.render('message', data);
     }
@@ -118,11 +118,11 @@ app.get('/pending', function (req, res) {
         let data = {
             view: '',
             message: 'Gracias por su compra, el pago se encuentra pendiente.',
-            payment: {
-                id: req.query.payment_id,
-                external_reference: req.query.external_reference,
-                merchant_order_id: req.query.merchant_order_id,
-            }
+            payment_id: req.query.payment_id,
+            external_reference: req.query.external_reference,
+            merchant_order_id: req.query.merchant_order_id,
+            preference_id: req.query.preference_id,
+            payment_type: req.query.payment_type
         }
         res.render('message', data);
     }
