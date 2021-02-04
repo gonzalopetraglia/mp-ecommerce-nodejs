@@ -132,10 +132,9 @@ app.get('/pending', function (req, res) {
 });
 
 app.post('/notification', function (req, res) {
-    console.log(req)
-    console.log('-------')
-    console.log(req.body)
-    fs.writeFileSync('./log.json', JSON.stringify(req));
+    let body = req.body;
+    console.log(body)
+    fs.writeFileSync('./log.json', body);
     res.status(200).json({});
 });
 
