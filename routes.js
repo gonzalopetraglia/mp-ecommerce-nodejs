@@ -63,7 +63,7 @@ app.post('/checkout', function (req, res) {
             ],
             installments: 6
         },
-        notification_url: BASE_URL + '/notification'
+        notification_url: BASE_URL + '/notification?source_news=webhooks'
     };
 
 
